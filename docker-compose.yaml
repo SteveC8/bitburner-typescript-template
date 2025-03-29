@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  bitburner-filesync:
+    build:
+      context: .
+    container_name: bitburner-filesync
+    volumes:
+      - ./src:/app/src
+      - ./NetscriptDefinitions.d.ts:/app/NetscriptDefinitions.d.ts
+    ports:
+      - 12525:12525
